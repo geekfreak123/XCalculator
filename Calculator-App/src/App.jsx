@@ -16,6 +16,11 @@ function App() {
   };
 
   const calculate = () => {
+    if (input === '') {
+      setResult('Error');
+      return;
+    }
+    
     try {
       const result = eval(input);
       setResult(result);
